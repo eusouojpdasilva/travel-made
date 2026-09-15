@@ -1,2 +1,3 @@
 tmp/
 *.tar.gz
+.openai/
