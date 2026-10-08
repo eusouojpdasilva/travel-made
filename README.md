@@ -1,12 +1,23 @@
-# Travel Made - Club Med Neve
+# Travel Made — Landing page de captação
 
-Landing page responsiva da campanha Club Med Neve da Travel Made.
+Landing page responsiva da Denise Paiva para captação de famílias interessadas em planejar uma grande viagem. A página apresenta o método de planejamento, destinos, a especialista, depoimento, dúvidas frequentes e chamadas para conversa pelo WhatsApp.
 
-## Publicar no Cloudflare Pages
+## Estrutura
 
-O site é estático e os arquivos finais já estão em `dist`.
+- `dist/index.html`: conteúdo da página e metadados.
+- `dist/styles.css`: identidade visual, layout responsivo e animações.
+- `dist/script.js`: menu mobile, slideshow da hero, animações e interações.
+- `dist/assets/`: logo Travel Made, retrato da Denise e marca do site.
 
-Ao conectar este repositório ao Cloudflare Pages, use:
+As fotografias da hero e dos destinos são carregadas de fontes externas (Pexels). O slideshow da hero alterna a cada três segundos com transição fade.
+
+## Desenvolvimento local
+
+Abra `dist/index.html` diretamente no navegador ou sirva `dist` com qualquer servidor HTTP estático. A página não exige etapa de build.
+
+## Publicação no Cloudflare Pages
+
+O projeto continua configurado para publicar a pasta `dist`:
 
 - Framework preset: `None`
 - Build command: deixe em branco
@@ -14,12 +25,4 @@ Ao conectar este repositório ao Cloudflare Pages, use:
 - Root directory: deixe em branco
 - Production branch: `main`
 
-O arquivo `wrangler.toml` também aponta o Cloudflare Pages para `./dist`, permitindo uma futura publicação pela CLI com Wrangler.
-
-## Desenvolvimento local
-
-Sirva a pasta `dist` com qualquer servidor HTTP estático. O ponto de entrada é `dist/index.html`.
-
-## Imagens pendentes
-
-A página já inclui a arte principal e uma imagem ilustrativa de família na neve. Os espaços da galeria e o retrato de Denise Paiva estão preparados para receber as imagens oficiais posteriormente.
+O `wrangler.toml` aponta para `./dist` para publicação pela CLI do Wrangler.
