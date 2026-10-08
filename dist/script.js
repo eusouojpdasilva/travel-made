@@ -1,11 +1,5 @@
 const slides = [...document.querySelectorAll('.hero-slide')];
 const slideButtons = [...document.querySelectorAll('.slide-dot')];
-const slideCaption = document.querySelector('.slide-caption');
-const captions = [
-  'ROMA · ADELIN M · PEXELS',
-  'CANCÚN · HUGOTECONECTA · PEXELS',
-  'ORLANDO · DAVID GUERRERO · PEXELS',
-];
 const hero = document.querySelector('.hero');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let activeSlide = 0;
@@ -19,7 +13,6 @@ function showSlide(index) {
     button.classList.toggle('is-active', selected);
     button.setAttribute('aria-pressed', String(selected));
   });
-  if (slideCaption) slideCaption.textContent = captions[activeSlide];
 }
 
 function stopRotation() {
@@ -95,11 +88,11 @@ if ('IntersectionObserver' in window && !reducedMotion) {
       entry.target.classList.add('is-visible');
       observer.unobserve(entry.target);
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
 
   revealItems.forEach((item, index) => {
     item.classList.add('reveal-ready');
-    item.style.transitionDelay = `${(index % 3) * 75}ms`;
+    item.style.transitionDelay = `${(index % 3) * 45}ms`;
     revealObserver.observe(item);
   });
 }
