@@ -91,3 +91,16 @@
 @media(prefers-reduced-motion:reduce){
   .hero-eyebrow,.hero h1,.hero-text,.hero-copy .button,.hero-aside{animation:none!important}
 }
+
+/* On phones and tablets, keep every destination photo the same width and height. */
+@media(max-width:760px){
+  .destination-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+  .destination-card,.dest-orlando,.dest-france,.dest-cancun,.dest-argentina,.dest-italy,.dest-dubai{
+    grid-column:1 / -1;
+    width:100%;
+    min-width:0;
+    height:clamp(300px,88vw,360px);
+    min-height:0;
+    padding:20px;
+  }
+}

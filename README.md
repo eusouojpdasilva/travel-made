@@ -1,4 +1,4 @@
-# Travel Made — Landing page de captação
+# Travel Made | Landing page de captação
 
 Landing page responsiva da Denise Paiva para captação de famílias interessadas em planejar uma grande viagem. A página apresenta o método de planejamento, destinos, a especialista, depoimento, dúvidas frequentes e chamadas para conversa pelo WhatsApp.
 
