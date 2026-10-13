@@ -23,7 +23,7 @@ function stopRotation() {
 function startRotation() {
   stopRotation();
   if (!reducedMotion && !document.hidden) {
-    timer = window.setInterval(() => showSlide(activeSlide + 1), 3000);
+    timer = window.setInterval(() => showSlide(activeSlide + 1), 2000);
   }
 }
 
@@ -34,8 +34,6 @@ slideButtons.forEach((button) => {
   });
 });
 
-hero?.addEventListener('mouseenter', stopRotation);
-hero?.addEventListener('mouseleave', startRotation);
 hero?.addEventListener('focusin', stopRotation);
 hero?.addEventListener('focusout', (event) => {
   if (!hero.contains(event.relatedTarget)) startRotation();
