@@ -23,7 +23,7 @@ function stopRotation() {
 function startRotation() {
   stopRotation();
   if (!reducedMotion && !document.hidden) {
-    timer = window.setInterval(() => showSlide(activeSlide + 1), 1000);
+    timer = window.setInterval(() => showSlide(activeSlide + 1), 2000);
   }
 }
 
